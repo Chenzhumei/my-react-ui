@@ -40,7 +40,7 @@ function App() {
          <div>hjfakdfjdasklfjasdlfjklads</div>
       </Transition>
       <Transition in={show} timeout={300} animation="zoom-in-left" wrapper>
-         <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>hjfakdfjdasklfjasdlfjklads</Button>
+         <Button btnType='primary' size='lg'>hjfakdfjdasklfjasdlfjklads</Button>
       </Transition>
     </div>
   );
