@@ -6,9 +6,10 @@ import SubMenu from './components/Menu/subMenu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import Icon from './components/Icon/icon';
+import Transition from './components/Transition/Transition';
 
 function App() {
- 
+  const [show, setShow] = useState(false);
   return (
     <div className="App">
       <Menu defaultIndex={'0'} mode={'horizontal'} defaultOpenSubMenus={['2']} onSelect={(index) => {alert(index)}}>
@@ -33,6 +34,14 @@ function App() {
             cool link 3
          </MenuItem>
       </Menu>  
+
+      <Button onClick={() => setShow(!show)}>Toggle</Button>
+      <Transition in={show} timeout={300} animation="zoom-in-left">
+         <div>hjfakdfjdasklfjasdlfjklads</div>
+      </Transition>
+      <Transition in={show} timeout={300} animation="zoom-in-left" wrapper>
+         <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>hjfakdfjdasklfjasdlfjklads</Button>
+      </Transition>
     </div>
   );
 }
