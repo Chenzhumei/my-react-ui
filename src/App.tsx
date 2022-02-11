@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import Icon from './components/Icon/icon';
 import Transition from './components/Transition/Transition';
+import Input from './components/Input/input';
 
 function App() {
   const [show, setShow] = useState(false);
@@ -42,6 +43,9 @@ function App() {
       <Transition in={show} timeout={300} animation="zoom-in-left" wrapper>
          <Button btnType='primary' size='lg'>hjfakdfjdasklfjasdlfjklads</Button>
       </Transition>
+
+
+      <Input icon={'user-check'} size='sm' prepend={'UserName'}/>
     </div>
   );
 }
