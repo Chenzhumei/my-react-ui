@@ -1,6 +1,6 @@
 // 配置全局的修饰器
 import React from 'react'
-// import { withInfo } from '@storybook/addon-info'
+import { withInfo } from '@storybook/addon-info'
 import { configure, addDecorator, addParameters } from '@storybook/react'
 // 引入样式文件
 import '../src/styles/index.scss'
@@ -24,7 +24,10 @@ const StoryWrapper = (storyFn: any) => (
 // 添加全局修饰器
 addDecorator(StoryWrapper)
 // 添加显示组件信息
-// addDecorator(withInfo);
+// addDecorator(withInfo as any);
+
+
+
 
 // 添加配置
 addParameters({
